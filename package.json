@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "algebra.js": "^0.2.6",
     "jimp": "^0.16.1"
   }
 }
