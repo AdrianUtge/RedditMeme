@@ -1,17 +1,7 @@
-const fs = require('fs')
+let arrt = [12, 13, 14, 66, 53, 23, 23, 45, 65, 66, 55, 54, 33, 45, 67, 88, 98, 65, 79, 84, 18, 15, 65]
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
+const newArr = [];
+while (arrt.length) newArr.push(arrt.splice(0, 4));
 
-
-var openFile = function (file) {
-    var input = file.target;
-
-    var reader = new FileReader();
-    reader.onload = function () {
-        var dataURL = reader.result;
-        var output = document.getElementById('output');
-        output.src = dataURL;
-    };
-    reader.readAsDataURL(input.files[0]);
-};
-
-openFile('./assets/assets.jpeg')
+console.log(newArr);

@@ -3,9 +3,11 @@ const algebra = require('algebra.js')
 var substrWord = require('substr-word');
 var fs = require('fs');
 var Canvas = require('canvas');
+let math = require('math.js')
 const {
     stringify
 } = require('querystring');
+const mathJs = require('math.js');
 
 let jkl = fs.readFileSync('./assets/image.png')
 let hjk = jkl.toString('hex')
@@ -14,28 +16,35 @@ let mko = ""
 mko = hjk;
 let asd = mko.substring(7, mko.length - 16)
 
-function hexToString(str) {
-    const buf = new Buffer.alloc(1000, str, 'hex');
-    return buf.toString('utf8');
-}
+console.log(jkl.slice(8, jkl.length - 16))
 
 function hexa(num, w, h) {
     console.log('_________________---------------______________')
-    console.log(num.length / h)
-    console.log(w, h)
-    for (let j = 0; j < h; j++) {
-        for (let i = 0; i < w; i += 2) {
-            let w = i - 2
-            if (w >= 0) {
+    console.log(w, h);
+    let arr = num.toJSON().data
 
-                y = num.substring(w, i)
-            }
+    const newArr = [];
+    while (arr.length) newArr.push(arr.splice(0, w));
+    console.log(newArr)
+    console.log(num.toJSON().data.length)
+
+
+
+
+
+    for (let j = 0; j < h; j++) {
+        for (let i = 0; i < w; i += 1) {
+            let w = i - 1
+
+            //console.log(j, i)
+            // y = num.substring(w, i)
+
 
 
 
         }
     }
-    return y;
+    //return y;
 
 }
 
@@ -69,7 +78,7 @@ function Matrixx(w, h, data) {
 
           }
 
-      } */
+      }*/
 
 
 
@@ -124,5 +133,5 @@ jimp.read("./assets/assets.jpeg", (err, image) => {
 
 
     image.greyscale().write("./assets/image.png");
-    hexa(asd, image.bitmap.width, image.bitmap.height)
+    hexa(jkl.slice(8, jkl.length - 16), image.bitmap.width, image.bitmap.height)
 });
