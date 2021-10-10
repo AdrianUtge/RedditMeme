@@ -10,6 +10,13 @@
   "license": "ISC",
   "dependencies": {
     "algebra.js": "^0.2.6",
-    "jimp": "^0.16.1"
+    "canvas": "^2.8.0",
+    "filesystem": "^1.0.1",
+    "fs": "^0.0.1-security",
+    "jimp": "^0.16.1",
+    "jsnumpy": "^1.1.10",
+    "math.js": "^1.1.46",
+    "pngjs": "^3.4.0",
+    "substr-word": "^1.0.1"
   }
 }
